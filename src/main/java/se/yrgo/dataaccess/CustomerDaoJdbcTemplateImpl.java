@@ -39,7 +39,7 @@ public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
         try {
             this.template.update(CREATE_CUSTOMER_SQL);
             this.template.update(CREATE_PHONE_SQL);
-        } catch(org.springframework.jdbc.BadSqlGrammarException ex){
+        } catch(Exception ex){
 			System.out.println("Assuming the Action table exists");
             // ex.printStackTrace();
         }
